@@ -109,83 +109,11 @@ Tweak these values to match your machine (GPU memory, CPU-only, etc.).
 
 ---
 
-## Output files
-
-The script writes the following files to `downloads/` (prefix = video title or filename):
-
-- `{prefix}.transcript.txt` — Plain transcript
-- `{prefix}.transcript_timestamped.txt` — Timestamped transcript
-- `{prefix}.transcript.srt` — SRT subtitle file
-- `{prefix}.translation_en.txt` — English translation (Whisper `translate`)
-- `{prefix}.translation_en_timestamped.txt`
-- `{prefix}.translation_en.srt`
-- `{prefix}.translation_hi.txt` — Hindi translation (if available)
-
----
-
-## Troubleshooting
-
-- **faster-whisper import fails**: Install with `pip install faster-whisper` and make sure your CUDA/cuDNN and PyTorch are compatible if using GPU.
-- **ffmpeg errors**: Ensure ffmpeg is installed and `FFMPEG_PATH` is set if ffmpeg is not in your PATH.
-- **pydub errors**: `pydub` requires ffmpeg; install `pydub` via pip and confirm ffmpeg path.
-- **`google_trans_new` failing/limited**: This package sometimes breaks due to Google changes — treat Hindi translation as optional.
-- **Out of memory during transcription**: Lower `MODEL_SIZE`, set `DEVICE = \"cpu\"` or use the chunked transcription fallback (`CHUNK_SECONDS`).
-
-If issues persist, open an issue with the script's traceback and environment details (OS, Python version, GPU model).
-
----
-
-## Security & Privacy
-
-- This script downloads content from YouTube — ensure you have the right to download and transcribe the content.
-- Transcription runs locally on your machine (unless you run it on a remote server) — files are stored locally under `downloads/`.
-
----
-
-## Suggested `requirements.txt`
-
-```
-gradio>=3.0
-yt-dlp
-faster-whisper
-pydub
-google_trans_new
-```
-
-Add or pin versions as needed for your environment.
-
----
-
-## How to publish to GitHub (quick commands)
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: add YT-Dash Gradio app"
-# create repo on GitHub (or use GitHub CLI): gh repo create <repo-name> --public --source=. --push
-git branch -M main
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-git push -u origin main
-```
-
----
-
-## Contributing
-
-Contributions welcome — forks, PRs and issues. Please add clear PR descriptions and small focused commits.
-
----
-
-## License
-
-MIT License — see `LICENSE` (or add your preferred license).
-
----
 
 ## Author
 
-Your Name — replace this with your name and contact link (e.g., GitHub profile, email).
+Created by Rohil Savaiya
 
 ---
 
-*Generated README for the `YT-Dash` Gradio app.*
+
